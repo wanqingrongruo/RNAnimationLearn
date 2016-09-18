@@ -14,6 +14,7 @@
 		E083915C1D8E6F9600DA91F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E083915A1D8E6F9600DA91F4 /* LaunchScreen.storyboard */; };
 		E08391671D8E6F9600DA91F4 /* RNCaLayerLearnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08391661D8E6F9600DA91F4 /* RNCaLayerLearnTests.swift */; };
 		E08391721D8E6F9600DA91F4 /* RNCaLayerLearnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08391711D8E6F9600DA91F4 /* RNCaLayerLearnUITests.swift */; };
+		E08391811D8E711500DA91F4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08391801D8E711500DA91F4 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E083916D1D8E6F9600DA91F4 /* RNCaLayerLearnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNCaLayerLearnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E08391711D8E6F9600DA91F4 /* RNCaLayerLearnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNCaLayerLearnUITests.swift; sourceTree = "<group>"; };
 		E08391731D8E6F9600DA91F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E08391801D8E711500DA91F4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E08391811D8E711500DA91F4 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				E08391651D8E6F9600DA91F4 /* RNCaLayerLearnTests */,
 				E08391701D8E6F9600DA91F4 /* RNCaLayerLearnUITests */,
 				E083914F1D8E6F9600DA91F4 /* Products */,
+				E083917F1D8E711400DA91F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				E08391731D8E6F9600DA91F4 /* Info.plist */,
 			);
 			path = RNCaLayerLearnUITests;
+			sourceTree = "<group>";
+		};
+		E083917F1D8E711400DA91F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E08391801D8E711500DA91F4 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +205,7 @@
 				TargetAttributes = {
 					E083914D1D8E6F9600DA91F4 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = UZZG6NM74T;
 						ProvisioningStyle = Automatic;
 					};
 					E08391611D8E6F9600DA91F4 = {
@@ -412,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UZZG6NM74T;
 				INFOPLIST_FILE = RNCaLayerLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhengwenxiang.RNCaLayerLearn;
@@ -424,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UZZG6NM74T;
 				INFOPLIST_FILE = RNCaLayerLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhengwenxiang.RNCaLayerLearn;
