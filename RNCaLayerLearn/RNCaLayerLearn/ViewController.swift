@@ -8,12 +8,23 @@
 
 import UIKit
 
+enum EncryptionError: Error{
+    case Empty
+    case Short
+    case Obvious(reason: String)
+}
+
 class ViewController: UIViewController {
     
     // MARK: - properties - 即定义的各种属性
     
     var layerView: UIView!
     var myLayer: CALayer!
+    
+    lazy var vae: String = {
+       
+        return "许嵩"
+    }()
     
     // MARK: -  Life cycle - 即生命周期
     
@@ -22,10 +33,25 @@ class ViewController: UIViewController {
         
         view.backgroundColor = UIColor.gray
         
+//        let customView: RNCustomView = RNCustomView()
+//        customView.center = CGPoint(x: 0, y: 0)
+        
         setupView()
         
         setLayer()
         
+        do {
+            let encrypted = try encryptString(str: "woshishuaige", withPassword: "123456")
+            print(encrypted)
+        } catch EncryptionError.Empty {
+            print("You must provide a password")
+        } catch EncryptionError.Short {
+            print("Password must be at least six characters")
+        } catch{
+            print("Something went wrong!")
+        }
+        
+             
     }
     
     override func didReceiveMemoryWarning() {
@@ -77,7 +103,7 @@ extension ViewController{
         
         myLayer = CALayer()
         myLayer.frame.size = CGSize(width: 100, height: 100)
-        myLayer.frame.origin = CGPoint(x: 100, y: 100)
+        myLayer.frame.origin = CGPoint(x:100 , y:100)
         myLayer.backgroundColor = UIColor.blue.cgColor
         layerView.layer.addSublayer(myLayer)
     }
@@ -87,6 +113,24 @@ extension ViewController{
 
 extension  ViewController{
     
+    func encryptString(str: String, withPassword password: String) throws -> String{
+        
+        guard password.characters.count > 0 else {
+            throw EncryptionError.Empty
+        }
+        
+        guard password.characters.count > 5 else {
+            throw EncryptionError.Short
+        }
+        
+        guard password != "123456" else {
+            throw EncryptionError.Obvious(reason: "too simple")
+        }
+        
+        let encrypted = password + str + password
+        return String(encrypted.characters.reversed())
+    }
+
 }
 
 // MARK: - Event response - 按钮/手势等事件的回应方法
